@@ -6,6 +6,9 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
+import com.example.rachu.store.AppDatabase
+import com.example.rachu.store.Event
+import com.example.rachu.store.EventDao
 import org.junit.*
 import org.junit.rules.TestRule
 import org.junit.runner.RunWith
@@ -42,7 +45,7 @@ class EventDaoTest {
     fun testAddAndRetreiveData() {
         val preInsertRetrievedCats = eventDao.getAll()
 
-        val event = Event(1,"Birthday","25-12-88", "First Brthdat", "drawables/media")
+        val event = Event(1, "Birthday", "25-12-88", "First Brthdat", "drawables/media")
         eventDao.insertAll(event)
 
         val postInsertEvents = eventDao.getAll()

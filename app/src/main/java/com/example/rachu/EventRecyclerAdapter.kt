@@ -1,33 +1,31 @@
 package com.example.rachu
 
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rachu.databinding.EventItemRowBinding
-import kotlinx.android.synthetic.main.event_item_row.view.*
+import com.example.rachu.store.Event
 
-class EventRecyclerAdapter(var events: List<Event>): RecyclerView.Adapter<EventRecyclerAdapter.EventHolder>() {
+class EventRecyclerAdapter(var events: List<Event>): RecyclerView.Adapter<EventRecyclerAdapter.EventViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
 //        val inflatedView = parent.inflate(R.layout.event_item_row, false)
-//        return EventHolder(inflatedView)
+//        return EventViewHolder(inflatedView)
 
         val viewInflater = LayoutInflater.from(parent.context)
         val holderEventItemBinding = EventItemRowBinding.inflate(viewInflater, parent, false)
-        return EventHolder(holderEventItemBinding)
+        return EventViewHolder(holderEventItemBinding)
     }
 
     override fun getItemCount() = events.size
 
-    override fun onBindViewHolder(holder: EventHolder, position: Int) {
+    override fun onBindViewHolder(viewHolder: EventViewHolder, position: Int) {
         val itemEvent = events[position]
-//        holder.bindEvent(itemEvent)
-        holder.setEventItem(itemEvent)
+//        viewHolder.bindEvent(itemEvent)
+        viewHolder.setEventItem(itemEvent)
     }
 
-//    class EventHolder(v: View): RecyclerView.ViewHolder(v), View.OnClickListener {
+//    class EventViewHolder(v: View): RecyclerView.ViewHolder(v), View.OnClickListener {
 //        private var view: View = v
 //        private var event: Event1? = null
 //
@@ -55,7 +53,7 @@ class EventRecyclerAdapter(var events: List<Event>): RecyclerView.Adapter<EventR
 //        }
 //    }
 
-    data class EventHolder(val eventItemRowBinding: EventItemRowBinding): RecyclerView.ViewHolder(eventItemRowBinding.root) {
+    data class EventViewHolder(val eventItemRowBinding: EventItemRowBinding): RecyclerView.ViewHolder(eventItemRowBinding.root) {
         fun setEventItem(event: Event) {
             eventItemRowBinding.event = event
             eventItemRowBinding.executePendingBindings()

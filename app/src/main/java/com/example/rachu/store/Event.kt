@@ -1,4 +1,4 @@
-package com.example.rachu
+package com.example.rachu.store
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

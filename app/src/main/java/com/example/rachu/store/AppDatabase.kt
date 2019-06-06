@@ -1,4 +1,4 @@
-package com.example.rachu
+package com.example.rachu.store
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

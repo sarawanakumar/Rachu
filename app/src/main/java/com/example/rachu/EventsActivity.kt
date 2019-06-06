@@ -1,6 +1,5 @@
 package com.example.rachu
 
-import android.app.Application
 import android.os.AsyncTask
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -9,7 +8,9 @@ import androidx.databinding.DataBindingUtil
 import com.example.rachu.databinding.ActivityEventsBinding
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.rachu.databinding.ContentEventsBinding
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.example.rachu.store.AppDatabase
+import com.example.rachu.store.Event
+import com.example.rachu.store.EventDao
 
 import kotlinx.android.synthetic.main.activity_events.*
 

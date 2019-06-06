@@ -2,6 +2,7 @@ package com.example.rachu
 
 import android.app.Application
 import androidx.room.Room
+import com.example.rachu.store.AppDatabase
 
 class RachuApplication: Application() {
 

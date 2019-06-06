@@ -1,4 +1,4 @@
-package com.example.rachu
+package com.example.rachu.store
 
 import androidx.room.Dao
 import androidx.room.Insert
