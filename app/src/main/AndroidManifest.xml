@@ -6,7 +6,7 @@
     <dist:module dist:instant="true"/>
 
     <application
-            android:name=".RachuApplication"
+            android:name=".common.RachuApplication"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -14,12 +14,17 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".EventsActivity"
+                android:name=".TestActivity"
+                android:label="@string/title_activity_test"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".events.EventsActivity"
                 android:label="@string/title_activity_events"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".MainActivity"
+                android:name=".home.MainActivity"
                 android:label="@string/app_name"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

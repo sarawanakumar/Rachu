@@ -1,4 +1,4 @@
-package com.example.rachu
+package com.example.rachu.common
 
 import android.app.Application
 import androidx.room.Room
